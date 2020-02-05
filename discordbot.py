@@ -2,7 +2,7 @@ from discord.ext import commands
 import os
 import traceback
 
-bot = commands.Bot(command_prefix='/')
+bot = commands.Bot(command_prefix='~')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 
@@ -14,8 +14,12 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
-async def gg(ctx):
-    await ctx.send('pong')
-
+async def ontest(ctx):
+    await ctx.send('テストに成功しました！オンラインになっています')
 
 bot.run(token)
+
+
+@bot.command()
+async def hey(ctx):
+    await ctx.send('やあ！こんにちは！')
