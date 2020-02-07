@@ -16,10 +16,10 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ontest(ctx):
     await ctx.send('テストに成功しました！オンラインになっています')
+async def hey(ctx):
+    await ctx.send('やあ！こんにちは！')
 
 bot.run(token)
 
 
 @bot.command()
-async def hey(ctx):
-    await ctx.send('やあ！こんにちは！')
